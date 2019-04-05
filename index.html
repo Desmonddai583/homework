@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>网站一级标题</h1>
+    <ul>
+        <li><a href="https://www.google.com">第一个导航链接</a></li>
+        <li><a href="https://www.google.com">第二个导航链接</a></li>
+        <li><a href="https://www.google.com">第三个导航链接</a></li>
+        <li><a href="https://www.google.com">第四个导航链接</a></li>
+    </ul>
+    <h2>文章二级标题</h2>
+    <div>
+        <span>文章作者</span>
+        <span>发布时间</span>
+        <span>修改时间</span>
+    </div>
+    <p>这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落这是第一个段落</p>
+    <img src="https://www.qidian.com.tw/images/book_covers/32/2517792_21_73-N.jpg" alt="看不到啊" title="我是图片啊" />
+    <p>这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落这是第二个段落</p>
+    <span>其他文章</span>
+    <ol>
+        <li>第一个文章</li>
+        <li>第二个文章</li>
+        <li>第三个文章</li>
+    </ol>
+    <table border="1">
+        <thead>
+            <th>表头</th>
+            <th>表头</th>
+            <th>表头</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="https://www.google.com">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="https://www.google.com">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="https://www.google.com">操作</a></td>
+            </tr>
+            <tr>
+                <td>表内容单元格</td>
+                <td>表内容单元格</td>
+                <td><a href="https://www.google.com">操作</a></td>
+            </tr>
+            <tr>
+                <td>总计</td>
+                <td colspan='2'>1000</td>
+            </tr>
+        </tbody>
+    </table>
+    <span>你还没注册吧？下面是个需要提交的表单</span>
+    <form action="">
+        <div>
+            <label for="name">用户名:</label>     
+            <input name="name" type="text" placeholder="张三" style="margin-left: 10px">
+        </div>
+        <div>
+            <label for="password">密码:</label>     
+            <input name="password" type="password" value="desmonddai583" style="margin-left: 10px">
+        </div>
+        <div>
+            <input type="radio" name="gender" value="male" />男
+            <input type="radio" name="gender" value="female" checked />女
+        </div>
+        <div>
+            <label for="city">城市:</label>
+            <select name="city">
+                <option value="bj">北京</option>
+                <option value="sh">上海</option>
+                <option value="sz">深圳</option>
+                <option value="cd" selected>成都</option>
+            </select>
+        </div>
+        <div>
+            <label for="sport">爱好的球类运动:</label>
+            <input type="checkbox" name="sport" value="pingpong" checked />乒乓球
+            <input type="checkbox" name="sport" value="badminton">羽毛球
+            <input type="checkbox" name="sport" value="basketball" checked />篮球
+        </div>
+        <div>
+            <textarea name="signature" cols="30" rows="3">请填写个人签名</textarea>
+            <input type="submit" value="提交">
+        </div>
+    </form>
+    <span>版权所有&copy;</span>
+    <br>
+    <br>
+    <div>
+        <div>长50的正方形</div>
+        <canvas id="extra1" width="300" height="100" style="border:1px solid #d3d3d3;background:#ffffff;"></canvas>
+    </div>
+    <br>
+    <div>
+        <div>连续并排的4个长50的正方形,两两间隔10</div>
+        <canvas id="extra2" width="300" height="100" style="border:1px solid #d3d3d3;background:#ffffff;"></canvas>
+    </div>
+</body>
+<script>
+    var e1 = document.getElementById("extra1");
+    var ctx1 = e1.getContext("2d");
+    ctx1.rect(10, 10, 50, 50);
+    ctx1.stroke();
+
+    var e2 = document.getElementById("extra2");
+    var ctx2 = e2.getContext("2d");
+    for (i = 0; i < 4; i++) { 
+        var x = ((i + 1) * 10) + i * 50;
+        ctx2.beginPath();
+        ctx2.rect(x, 10, 50, 50);
+        ctx2.stroke();
+    }
+</script>
+</html>
