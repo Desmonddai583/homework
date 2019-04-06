@@ -152,6 +152,56 @@
             }
         </code>
     </pre>
+
+    <br>
+    <span>思考题</span>
+    <pre>
+        <code>
+            const drawSquare = (width) => {
+                forward(width)
+                right(90)
+                forward(width)
+                right(90)
+                forward(width)
+                right(90)
+                forward(width)
+            }
+            
+            const drawCol = (x, y, col, width, margin) => {
+                const interval  = width + margin
+            
+                for (var i = 0; i < col; i++) { 
+                    jump(x, y)
+                    drawSquare(width)
+                    right(90)
+                    x += interval
+                }
+            }
+            
+            const draw = (startX, startY, row, col, width, margin) => {
+                let x = startX
+                let y = startY
+                const interval  = width + margin
+            
+                for (let i = 0; i < row; i++) { 
+                    drawCol(x, y, col, width, margin, startX)
+                    y += interval
+                    if (i !== row - 1) jump(x, y)
+                }
+            }
+            
+            /*
+                draw(startX, startY, row, col, width, margin)
+                startX 起始坐标X
+                startY 起始坐标Y
+                row 行数
+                col 列数
+                width 宽度
+                margin 间距
+            */
+            draw(10, 10, 3, 4, 50, 10)
+        </code>
+    </pre>
 </body>
 <script>
     var e1 = document.getElementById("extra1");
